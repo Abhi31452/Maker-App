@@ -1,0 +1,55 @@
+<p>dash-board works!</p>
+
+<article  *ngIf="this.isDashboardRoute" class="flex flex-wrap space-x-5">
+    <div
+        class="border border-slate-300 p-6 rounded-lg shadow-lg w-72 h-auto m-5 bg-white dark:bg-gray-800 dark:border-gray-700 flex flex-col">
+        <h5 class="p-2 text-3xl text-left font-semibold hover:text-blue-600 text-gray-900 dark:text-white">Subjects</h5>
+        <p class="m-2 text-lg font-semibold text-gray-700 dark:text-gray-400">
+            Total Number of Subjects : <strong>{{subjectCount}}</strong></p>
+        <div class="mt-auto flex justify-center">
+            <a routerLinkActive="activeLink" routerLink="subject"
+                class="flex items-center text-white bg-blue-600 hover:bg-blue-700 px-4 py-2.5 rounded-lg shadow-lg">
+                Add Subject
+                <svg class="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+
+    <div
+        class="border border-slate-300 p-6 rounded-lg shadow-lg w-72 h-auto flex flex-col justify-between m-5 bg-white dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="p-2 text-3xl text-left font-semibold hover:text-blue-600 text-gray-900 dark:text-white">Question
+            Papers</h5>
+        <p class="m-2 text-lg font-semibold text-gray-700 dark:text-gray-400">Total Number of Question Papers:</p>
+        <div class="mt-auto flex justify-center">
+            <a routerLinkActive="activeLink" routerLink="subject"
+                class="flex items-center text-white bg-blue-600 hover:bg-blue-700 px-4 py-2.5 rounded-lg shadow-lg">
+                Add Question Paper
+                <svg class="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+
+    <div
+        class="border border-slate-300 p-6 rounded-lg shadow-lg w-80 flex flex-col justify-between m-5 bg-white dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="p-2 text-3xl text-left font-semibold hover:text-blue-600 text-gray-900 dark:text-white">Question
+            Paper Stats</h5>
+        <p class="m-2 text-lg font-semibold text-gray-700 dark:text-gray-400">Total Papers added Last Week:</p>
+        <div class="mt-auto flex justify-center">
+            <a routerLinkActive="activeLink" routerLink="subject"
+                class="flex items-center text-white text-center bg-blue-600 hover:bg-blue-700 px-4 py-2.5 rounded-lg shadow-lg">
+                View Stats
+                <svg class="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</article>
+
+<router-outlet></router-outlet>
